@@ -1,0 +1,144 @@
+/* ===== DOWNLOAD PAGE CUSTOM STYLES ===== */
+
+/* Center-align intro text */
+.section-title,
+.content-text {
+  text-align: center;
+}
+
+/* Make paragraph narrower for better focus */
+.content-text {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #000000;
+}
+
+/* Download sections layout */
+.download-options {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2px;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 900px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+}
+
+/* Each block */
+.download-box {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+}
+
+/* Divider line between boxes */
+.download-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* Specific color themes */
+.download-windows {
+  background: linear-gradient(135deg, #003b80, #0078d7);
+}
+
+.download-linux {
+  background: linear-gradient(135deg, #111, #d81a00);
+}
+
+/* Headings */
+.download-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Description text */
+.download-box p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  margin-bottom: 25px;
+}
+
+/* === BUTTON WITH STRONG VERTICAL SHINE AND RGB BORDER TRAIL === */
+.download-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 26px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  z-index: 1;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(255,255,255,0.15);
+}
+
+/* Bright vertical shine animation */
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.05) 10%,
+    rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0.4) 40%,
+    rgba(255,255,255,0.75) 50%,
+    rgba(255,255,255,0.4) 60%,
+    rgba(255,255,255,0.15) 80%,
+    rgba(255,255,255,0.05) 90%,
+    rgba(255,255,255,0) 100%
+  );
+  animation: verticalShine 2.5s linear infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  filter: blur(1px);
+  z-index: 0;
+}
+
+/* Vertical shine motion */
+@keyframes verticalShine {
+  0% { left: -30%; }
+  100% { left: 120%; }
+}
+
+/* RGB border animation on hover */
+@keyframes rgbBorderTrail {
+  0% { border-color: #ff0040; box-shadow: 0 0 15px #ff0040; }
+  25% { border-color: #ff8000; box-shadow: 0 0 18px #ff8000; }
+  50% { border-color: #00ffd5; box-shadow: 0 0 18px #00ffd5; }
+  75% { border-color: #0070ff; box-shadow: 0 0 18px #0070ff; }
+  100% { border-color: #ff0040; box-shadow: 0 0 15px #ff0040; }
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  animation: rgbBorderTrail 3.5s linear infinite;
+  background: rgba(255,255,255,0.18);
+}
+
+/* Note box adjustment */
+.note-box {
+  text-align: center;
+  margin-top: 50px;
+}
